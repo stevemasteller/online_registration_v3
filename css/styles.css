@@ -1,0 +1,413 @@
+/*********************************************
+Global Layout Set-up
+*********************************************/
+
+* { 
+	box-sizing: border-box;
+}
+  
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Merriweather, sans-serif;
+	font-size: 1.5em;
+	color: #a9aeb3;
+	background: #f6f6f6;
+}
+
+h1 {
+	color: #2d3945;
+	font-size: 1.25em;
+	font-weight: 700;
+}
+
+button {
+	font-family: Merriweather, sans-serif;	
+}
+
+
+
+/*********************************************
+Header styles
+*********************************************/
+
+header {
+	background: #2d3945;
+}
+
+header h1 {
+	color: #fff;
+	padding: 1.5em 0;
+	font-weight: 900;
+}
+
+
+
+/*********************************************
+Section Styles
+*********************************************/
+
+section {
+	padding-top: 0.25em;
+	padding-bottom: 1.5em;
+	border-bottom: solid 4px #2d3945;
+}
+
+
+
+/*********************************************
+Form Element Styles
+*********************************************/
+
+form {
+	padding: .875em;
+	background: #2aba2a;
+	border-top:  double 10px #2d3945;
+	text-align: left;
+}
+
+fieldset,
+legend,
+button {
+	padding: 0;
+	border: none;
+}
+
+legend{
+	color: #2d3945;
+}
+
+fieldset {
+	margin-top: 0.875em;
+}
+
+legend,
+button {
+	font-size: 1.25em;	
+	font-weight: 700;
+	margin-bottom: 1.25em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+legend,
+textarea,
+button {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.border-top {
+	border-radius: 0;
+	padding-top: 1.25em;
+	border-top: 4px solid #2d3945;
+}
+
+#apartment {
+	width: initial;
+}
+
+label {
+	display: block;
+	margin-bottom: .5em;
+}
+
+input,
+select {
+	margin-bottom: 1.25em;	
+}
+
+input,
+select,
+textarea {
+	font-size: 0.875em;
+	font-weight: 300;
+	padding: .875em;
+	background: #c1deeb;
+	border: 5px #c1deeb solid;
+	outline: none;
+}
+
+input:focus, 
+select:focus,
+textarea:focus {
+	background: #fff;
+	border-color: #46698b;
+	transition: border-color .6s, background-color .6s;
+}
+
+
+/* Can't use DRY on these placeholders for some reason */
+#name::-webkit-input-placeholder,
+#email::-webkit-input-placeholder {
+   text-align: right;
+   font-size: 0.875em;
+   font-style: italic;
+}
+
+#name:-moz-placeholder,
+#email:-moz-placeholder { /* Firefox 18- */
+   text-align: right;
+   font-size: 0.875em;
+   font-style: italic;
+}
+
+#name::-moz-placeholder,
+#email::-moz-placeholder {  /* Firefox 19+ */
+   text-align: right;
+   font-size: 0.875em;
+   font-style: italic;
+}
+
+#name:-ms-input-placeholder,
+#email:-ms-input-placeholder {  
+   text-align: right;
+   font-size: 0.875em;
+   font-style: italic;
+}
+
+.custom-checkbox,
+.custom-checkbox + label,
+.custom-radio,
+.custom-radio + label
+ {
+	display: inline-block;
+} 
+
+.custom-checkbox + label,
+.custom-radio + label {
+	padding-left: 0.5em;
+	padding-bottom: 0.5em;
+} 
+
+input[type="checkbox"],
+input[type="radio"] {
+	visibility: hidden;
+}
+
+.custom-checkbox,
+.custom-radio {
+	width: 25px;
+	position: relative;
+}
+
+/* style the checkboxes */
+.custom-checkbox label {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background: #c1deeb;
+	border:4px solid #2d3945;
+	border-radius: 5px;
+}
+
+.custom-checkbox label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 5px;
+	left: 5px;
+	border: 3px solid #2d3945;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-60deg);
+}
+
+/* style the radio buttons */
+.custom-radio label {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background: #c1deeb;
+	border:4px solid #2d3945;
+	border-radius: 50%;
+}
+
+.custom-radio label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 11px;
+	height: 11px;
+	background-color: #2d3945;
+	top: 4px;
+	left: 4px;
+	border-radius: 50%;
+}
+
+.custom-checkbox label:hover::after,
+.custom-radio label:hover::after {
+	opacity: 0.5;
+}
+
+.custom-checkbox input[type=checkbox]:checked + label:after,
+.custom-radio input[type=radio]:checked + label:after {
+	opacity: 1;
+}
+
+.radio-label {
+	margin-top: 0.875em;
+}
+
+.textarea-label {
+	margin-top: 0.875em;
+	padding-bottom: 0.5em;
+}
+
+textarea {
+	height: 8em;
+}
+
+/* style the submit button */
+button {
+	color: #fff;
+	padding: .875em 0;
+	background: #22627e;
+	margin: 1.25em 0 .5em;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #184c62;
+}
+
+
+
+/*********************************************
+Footer Styles
+*********************************************/
+
+footer {
+	font-style: italic;
+}
+
+
+
+/*********************************************
+Styles for larger screens
+*********************************************/
+
+@media screen and (min-width: 768px) {
+  
+	/***** general *****/
+	.flex {
+		display: flex; 
+		margin: 0 5%;
+	}
+  
+	/***** header *****/
+	.main-nav .flex {
+		justify-content: space-around;
+		margin: 0 20%;	  	/* replace 5% */
+	}
+  
+	.header div img {
+		width: 100%;
+		margin-top: 0;
+	}
+	
+	.profile {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		text-align: left;
+		margin-top: 4em;
+	}
+  
+	.profile p {
+		padding-right: 5%; 	/* make a gutter */
+		margin-top: 0;
+	}
+	
+	/***** content styles *****/
+	.secondary-content {
+		margin-top: 4em;
+	}
+	
+	.main-content li {
+		display: inline-block;
+		width: 40%;
+		margin-left: 2.5%;		/* make a gutter */
+		margin-right: 2.5%;		/* make a gutter */
+	}
+	
+	
+/******************************************************/
+/******************************************************/
+/* I believe my problem has something to do with      */
+/* setting the height of .main-content li but none of */
+/* these examples work.                               */
+/******************************************************/
+/******************************************************/
+	
+/*	.main-content li {
+		height: 360px;
+	} */
+	
+/*	.gallery-text {
+		height: 180px;
+	} */
+	
+/*	.main-content p {
+		height: 100px;
+	} */
+	
+	/***** footer styles *****/
+	.footer p {
+		max-width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.footer-main-nav {
+		display: block;
+		float: right;
+	}
+	
+	.footer-main-nav ul {
+		padding: 0 1em 0 0;
+		margin-top: -1em;	/* tweek the position */
+	}
+	
+	.footer-main-nav li {
+		list-style-type: none;
+		font-size: 0.8em;
+		padding: 1em;
+	}
+	
+	.footer-secondary-nav {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+  
+	/***** header styles *****/
+	.large-screen-flex {
+		display: flex;
+		padding: 1em;
+		justify-content: space-between;
+	}	
+	
+	.main-nav li {
+		padding: 1em 1em 0 1em;
+	}
+	
+	/***** content styles *****/
+	.main-content li {
+		width: 25%;
+	}
+}
+
