@@ -60,6 +60,11 @@ section {
 Form Element Styles
 *********************************************/
 
+.form-wrapper {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
 form {
 	padding: .875em;
 	background: #186253;
